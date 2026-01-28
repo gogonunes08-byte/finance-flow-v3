@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "exportDate": "2026-01-26T20:30:00.000Z",
+    "projectName": "Finance Flow Pro V3",
+    "totalTransactions": 128,
+    "version": "1.0.0",
+    "note": "Todas as 128 transações do banco de dados"
+  },
+  "summary": {
+    "totalIncome": 5530.23,
+    "totalExpense": 5951.17,
+    "currentBalance": -420.94,
+    "totalTransactions": 128,
+    "dateRange": {
+      "from": "2025-10-01",
+      "to": "2026-01-26"
+    }
+  },
+  "transactions": [
+    {
+      "id": 1,
+      "type": "expense",
+      "amount": 120.00,
+      "category": "Outros",
+      "description": "Margi",
+      "date": "2026-01-23",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-23T10:00:00.000Z",
+      "updatedAt": "2026-01-23T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "type": "income",
+      "amount": 0.02,
+      "category": "Outros",
+      "description": "Juros conta",
+      "date": "2026-01-23",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-23T10:05:00.000Z",
+      "updatedAt": "2026-01-23T10:05:00.000Z"
+    },
+    {
+      "id": 3,
+      "type": "expense",
+      "amount": 375.00,
+      "category": "Outros",
+      "description": "Pix ruan",
+      "date": "2026-01-23",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-23T10:10:00.000Z",
+      "updatedAt": "2026-01-23T10:10:00.000Z"
+    },
+    {
+      "id": 4,
+      "type": "expense",
+      "amount": 18.73,
+      "category": "Outros",
+      "description": "Asuste",
+      "date": "2026-01-23",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-23T10:15:00.000Z",
+      "updatedAt": "2026-01-23T10:15:00.000Z"
+    },
+    {
+      "id": 5,
+      "type": "expense",
+      "amount": 100.00,
+      "category": "Outros",
+      "description": "Pix Nubank",
+      "date": "2026-01-19",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-19T14:00:00.000Z",
+      "updatedAt": "2026-01-19T14:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "type": "income",
+      "amount": 0.01,
+      "category": "Outros",
+      "description": "juros",
+      "date": "2026-01-19",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-19T14:05:00.000Z",
+      "updatedAt": "2026-01-19T14:05:00.000Z"
+    },
+    {
+      "id": 7,
+      "type": "expense",
+      "amount": 16.00,
+      "category": "Outros",
+      "description": "rifa",
+      "date": "2026-01-19",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-19T14:10:00.000Z",
+      "updatedAt": "2026-01-19T14:10:00.000Z"
+    },
+    {
+      "id": 8,
+      "type": "expense",
+      "amount": 69.94,
+      "category": "Outros",
+      "description": "Margi",
+      "date": "2026-01-17",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-17T11:00:00.000Z",
+      "updatedAt": "2026-01-17T11:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "type": "expense",
+      "amount": 91.00,
+      "category": "Outros",
+      "description": "Asuste",
+      "date": "2026-01-17",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-17T11:05:00.000Z",
+      "updatedAt": "2026-01-17T11:05:00.000Z"
+    },
+    {
+      "id": 10,
+      "type": "income",
+      "amount": 0.16,
+      "category": "Outros",
+      "description": "Juros",
+      "date": "2026-01-17",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-17T11:10:00.000Z",
+      "updatedAt": "2026-01-17T11:10:00.000Z"
+    },
+    {
+      "id": 11,
+      "type": "income",
+      "amount": 122.76,
+      "category": "Trabalho",
+      "description": "iFood",
+      "date": "2026-01-17",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-17T11:15:00.000Z",
+      "updatedAt": "2026-01-17T11:15:00.000Z"
+    },
+    {
+      "id": 12,
+      "type": "expense",
+      "amount": 12.83,
+      "category": "Outros",
+      "description": "Asuste",
+      "date": "2026-01-17",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-17T11:20:00.000Z",
+      "updatedAt": "2026-01-17T11:20:00.000Z"
+    },
+    {
+      "id": 13,
+      "type": "expense",
+      "amount": 33.41,
+      "category": "Outros",
+      "description": "Asuste",
+      "date": "2026-01-17",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-17T11:25:00.000Z",
+      "updatedAt": "2026-01-17T11:25:00.000Z"
+    },
+    {
+      "id": 14,
+      "type": "expense",
+      "amount": 120.00,
+      "category": "Outros",
+      "description": "Margi",
+      "date": "2026-01-16",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-16T09:00:00.000Z",
+      "updatedAt": "2026-01-16T09:00:00.000Z"
+    },
+    {
+      "id": 15,
+      "type": "expense",
+      "amount": 30.00,
+      "category": "Outros",
+      "description": "Pix",
+      "date": "2026-01-16",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-16T09:05:00.000Z",
+      "updatedAt": "2026-01-16T09:05:00.000Z"
+    },
+    {
+      "id": 16,
+      "type": "income",
+      "amount": 0.01,
+      "category": "Outros",
+      "description": "Juros",
+      "date": "2026-01-16",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-16T09:10:00.000Z",
+      "updatedAt": "2026-01-16T09:10:00.000Z"
+    },
+    {
+      "id": 17,
+      "type": "expense",
+      "amount": 91.00,
+      "category": "Outros",
+      "description": "Asuste",
+      "date": "2026-01-15",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-15T08:00:00.000Z",
+      "updatedAt": "2026-01-15T08:00:00.000Z"
+    },
+    {
+      "id": 18,
+      "type": "expense",
+      "amount": 33.41,
+      "category": "Outros",
+      "description": "Asuste",
+      "date": "2026-01-15",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-15T08:05:00.000Z",
+      "updatedAt": "2026-01-15T08:05:00.000Z"
+    },
+    {
+      "id": 19,
+      "type": "income",
+      "amount": 122.76,
+      "category": "Trabalho",
+      "description": "iFood",
+      "date": "2026-01-14",
+      "paymentMethod": "pix",
+      "createdAt": "2026-01-14T18:00:00.000Z",
+      "updatedAt": "2026-01-14T18:00:00.000Z"
+    },
+    {
+      "id": 20,
+      "type": "expense",
+      "amount": 12.83,
+      "category": "Outros",
+      "description": "Asuste",
+      "date": "2026-01-14",
+      "paymentMethod": "transferencia",
+      "createdAt": "2026-01-14T18:05:00.000Z",
+      "updatedAt": "2026-01-14T18:05:00.000Z"
+    }
+  ],
+  "note": "Este é um arquivo de exemplo com as primeiras 20 transações. O banco contém todas as 128 transações. Para acessar o banco de dados completo, consulte DATABASE_DOCUMENTATION.md"
+}

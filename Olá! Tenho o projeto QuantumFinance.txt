@@ -1,0 +1,41 @@
+"Olá! Tenho o projeto QuantumFinance 2026 completo funcionando, mas com 1 problema no cálculo do saldo. O sistema tem dashboard + bot WhatsApp integrados, atualização automática, tudo funcionando. Preciso apenas corrigir o cálculo do saldo no dashboard (atualmente mostra R$ 7.063,93 mas pode estar errado). Seguindo minhas regras: um passo por vez, testar cada etapa, manter o que já funciona, linguagem simples. Pode começar analisando o cálculo atual no dashboard?"
+
+🎯 PROJETO: QUANTUMFINANCE 2026 - SISTEMA COMPLETO
+✅ STATUS: 100% FUNCIONAL COM 1 AJUSTE NECESSÁRIO
+
+📁 O QUE TENHO (4 ARQUIVOS):
+1. indexv2.html              ← Dashboard visual
+2. server_quantum.js.js      ← Servidor (porta 8081)  
+3. BOT_WHATSAPP_CORRIGIDO.js ← Bot WhatsApp (porta 8082)
+4. dados_dashboard.json      ← 93 transações
+
+🔄 COMO FUNCIONA:
+WhatsApp → Bot → Dashboard → Atualização automática
+Tudo sincronizado, sem F5 necessário
+
+🔧 PROBLEMA ATUAL:
+• Saldo calculado inconsistente (R$ 7.063,93)
+• Dashboard pode estar somando errado
+• Precisa verificar cálculo e dados
+
+🎯 PRÓXIMA AÇÃO:
+• Ajustar cálculo do saldo no dashboard
+• Garantir que entradas - gastos = saldo correto
+• Testar com transações simples
+
+📱 COMANDOS WHATSAPP (funcionando):
+• chat: gasto [valor] [descrição]
+• chat: entrada [valor] [descrição]  
+• chat: ajuda / chat: teste
+
+🎨 REGRAS DO IGOR (SEGUIR SEMPRE):
+1. Um passo por vez
+2. Testar cada etapa
+3. Manter o funcionando
+4. Cores neon (#00ff88, #ff0080, #0088ff)
+5. Fontes Orbitron/Rajdhani
+6. Dashboard frontend puro
+7. Three.js para 3D
+8. Explicar em linguagem simples (sou leigo)
+
+🚀 PRONTO PARA: Corrigir cálculo do saldo apenas no dashboard

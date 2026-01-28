@@ -1,0 +1,1 @@
+ALTER TABLE `transactions` ADD `isRecurring` boolean DEFAULT false NOT NULL;

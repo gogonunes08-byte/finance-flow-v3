@@ -1,0 +1,59 @@
+🎨 REGRAS DO IGOR (SEGUIR SEMPRE):
+1. Um passo por vez
+2. Testar cada etapa
+3. Manter o funcionando
+4. Cores neon (#00ff88, #ff0080, #0088ff)
+5. Fontes Orbitron/Rajdhani
+6. Dashboard frontend puro
+7. Three.js para 3D
+8. Explicar em linguagem simples (sou leigo)
+Situação Atual:
+
+text
+PROJETO: QuantumFinance 2026 - Dashboard Financeiro WhatsApp
+STATUS: Dashboard carregando dados mas cálculo do saldo incorreto
+
+PROBLEMA ATUAL:
+1. JSON corrigido com saldo inicial de -R$ 451,14
+2. Funções parseValor() e formatarMoeda() adicionadas
+3. Dashboard mostra valores mas cálculo não bate com esperado
+4. Saldo atual mostrado: ? (precisa verificar)
+5. Saldo esperado: R$ 7.063,93
+
+PASSOS JÁ FEITOS:
+✅ PASSO 1: Decidir sobre JSON (adicionar saldo inicial -451,14)
+✅ PASSO 2: Atualizar dados_dashboard.json com saldo corrigido
+✅ PASSO 3: Corrigir função parseValor() no indexv2.html
+✅ PASSO 4: Adicionar função formatarMoeda() faltante
+🔧 PASSO 5: Testar cálculo (em andamento - problemas)
+
+ARQUIVOS EXISTENTES:
+1. indexv2.html - Dashboard principal
+2. dados_dashboard.json - Dados das transações
+
+PRÓXIMOS PASSOS NECESSÁRIOS:
+1. Corrigir função atualizarEstatisticas() - cálculo errado
+2. Verificar por que 96 transações aparecem (JSON tem 74)
+3. Ajustar para saldo final ser R$ 7.063,93
+O que preciso fazer na próxima conversa:
+
+text
+PRIORIDADE 1: Corrigir cálculo do saldo no dashboard
+- Revisar função atualizarEstatisticas()
+- Verificar duplicação de transações (96 vs 74)
+- Garantir que parseValor() está convertendo corretamente
+- Ajustar para saldo final ser R$ 7.063,93
+
+PRIORIDADE 2: Testar e validar
+- Testar função por função
+- Mostrar cálculos no console para debug
+- Verificar cada transação individualmente
+
+MÉTODO DE TRABALHO:
+- Um passo por vez, testando cada alteração
+- Explicar em linguagem simples
+- Manter dashboard funcionando
+- Foco primeiro no cálculo correto, depois design
+
+
+PROXIMO PASSO CORRIGIR O HTML ME DEVOLVA O CODIGO INTEIRO CORRIGIDO REPETINDO ESTOU ENVIANDO O CODIGO ATUALIZE ELE COM AS CORRECOES E ME ENVIE ELE TODO !! NAO SO A CORRECAO , JA CORRIJA TUDO QUE DER , NAO ESQUECA DAS MINHAS REGRAS. 
