@@ -574,7 +574,7 @@ export default function Dashboard() {
                     <div className="space-y-4 py-4">
                       {/* Tipo */}
                       <div>
-                        <label className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-slate-300" : "text-slate-700"}`}>Tipo</label>
+                        <label className={`block text-sm font-medium mb-2 ${theme === "dark" ? "text-slate-300" : "text-slate-700"}`}>Tipo de Transação</label>
                         <Select
                           value={newTransactionData.type}
                           onValueChange={(value: "income" | "expense") => setNewTransactionData({ ...newTransactionData, type: value })}
