@@ -1,31 +1,25 @@
-
 import { google } from "googleapis";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { drizzle } from "drizzle-orm/mysql2";
-import mysql from "mysql2/promise";
 import "dotenv/config";
 import { format } from "date-fns";
-import { transactions, users, categories, budgets, paymentMethods, transactionTags, tags, userSettings } from "../../drizzle/schema";
+import { transactions, categories } from "../../drizzle/schema";
+import { getDb } from "../db";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export class DriveService {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private auth: any;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private drive: any;
 
     constructor() {
         if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
             console.warn("⚠️ Drive Service: Credentials missing");
         }
-
-        // Auth is handled via Passport session usually, but for background tasks or specific actions
-        // we might need a specific client.
-        // However, googleapis usually needs an OAuth2 client with credentials.
-        // For 'Backup Now' triggered by user, we can use the user's access token from the session.
-        // BUT, here we are defining the service.
     }
 
     async uploadBackup(accessToken: string) {
@@ -77,13 +71,11 @@ export class DriveService {
     }
 
     private async dumpDatabase() {
-        const connection = await mysql.createConnection(process.env.DATABASE_URL!);
-        const db = drizzle(connection);
+        const db = await getDb();
+        if (!db) throw new Error("Database connection failed");
 
         const allTransactions = await db.select().from(transactions);
         const allCategories = await db.select().from(categories);
-
-        await connection.end();
 
         return {
             timestamp: new Date().toISOString(),

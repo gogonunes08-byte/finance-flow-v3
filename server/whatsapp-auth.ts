@@ -25,7 +25,7 @@ export async function initializeWhatsApp() {
     });
 
     // Evento de QR Code
-    sock.ev.on("connection.update", async (update) => {
+    sock.ev.on("connection.update", async (update: any) => {
       const { connection, lastDisconnect, qr } = update;
 
       if (qr) {
@@ -62,14 +62,14 @@ export async function initializeWhatsApp() {
     sock.ev.on("creds.update", saveCreds);
 
     // Receber mensagens
-    sock.ev.on("messages.upsert", async (m) => {
+    sock.ev.on("messages.upsert", async (m: any) => {
       const msg = m.messages[0];
       if (!msg.key.fromMe && msg.message) {
         const senderNumber = msg.key.remoteJid?.replace("@s.whatsapp.net", "") || "";
         const messageText = msg.message.conversation || msg.message.extendedTextMessage?.text || "";
-        
+
         console.log("[WhatsApp] Mensagem recebida de", senderNumber, ":", messageText);
-        
+
         try {
           const { processMessage, sendReply } = await import("./whatsapp-message-processor-v2");
           const response = await processMessage(senderNumber, messageText);

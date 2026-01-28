@@ -77,6 +77,13 @@ export async function getUserByOpenId(openId: string) {
   return result[0];
 }
 
+export async function getUserWithToken() {
+  const db = await getDb();
+  if (!db) return undefined;
+  const [user] = await db.select().from(users).where(isNotNull(users.googleAccessToken)).limit(1);
+  return user;
+}
+
 export async function getTransactions(filters?: {
   type?: "income" | "expense";
   category?: string;
