@@ -99,5 +99,20 @@ export const transactionTags = pgTable("transactionTags", {
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
 
+
 export type TransactionTag = typeof transactionTags.$inferSelect;
 export type InsertTransactionTag = typeof transactionTags.$inferInsert;
+
+export const investments = pgTable("investments", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  category: text("category").notNull(), // 'crypto', 'fii', 'vehicle', 'cash'
+  amount: text("amount").notNull(),
+  currentPrice: text("currentPrice").notNull(),
+  currency: text("currency").default("BRL").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+});
+
+export type Investment = typeof investments.$inferSelect;
+export type InsertInvestment = typeof investments.$inferInsert;

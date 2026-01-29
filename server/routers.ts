@@ -27,6 +27,9 @@ import {
   addTagToTransaction,
   removeTagFromTransaction,
   getTransactionTags,
+  getInvestments,
+  createInvestment,
+  deleteInvestment,
 } from "./db";
 
 // WhatsApp Bot é inicializado em server/_core/index.ts
@@ -317,6 +320,41 @@ export const appRouter = router({
       .input(z.object({ transactionId: z.number() }))
       .query(async ({ input }) => {
         return await getTransactionTags(input.transactionId);
+      }),
+  }),
+
+  // ============ INVESTIMENTOS ============
+  investments: router({
+    list: publicProcedure.query(async () => {
+      return await getInvestments();
+    }),
+
+    create: publicProcedure
+      .input(
+        z.object({
+          name: z.string(),
+          category: z.string(), // "crypto", "fii", "vehicle", "cash"
+          amount: z.number(),
+          currentPrice: z.number(),
+          currency: z.enum(["BRL", "USD"]).default("BRL"),
+        })
+      )
+      .mutation(async ({ input }) => {
+        await createInvestment({
+          name: input.name,
+          category: input.category,
+          amount: input.amount.toString(),
+          currentPrice: input.currentPrice.toString(),
+          currency: input.currency,
+        });
+        return { success: true };
+      }),
+
+    delete: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        await deleteInvestment(input.id);
+        return { success: true };
       }),
   }),
 });

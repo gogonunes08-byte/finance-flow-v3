@@ -1,7 +1,7 @@
 import { eq, and, between, desc, inArray, isNotNull } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/node-postgres";
 import pg from 'pg';
-import { InsertUser, users, transactions, categories, paymentMethods, budgets, userSettings, tags, transactionTags, type Transaction, type InsertTransaction, type Category, type InsertCategory, type PaymentMethod, type InsertPaymentMethod, type Budget, type InsertBudget, type UserSettings, type Tag, type InsertTag, type TransactionTag, type InsertTransactionTag } from "../drizzle/schema";
+import { InsertUser, users, transactions, categories, paymentMethods, budgets, userSettings, tags, transactionTags, investments, type Transaction, type InsertTransaction, type Category, type InsertCategory, type PaymentMethod, type InsertPaymentMethod, type Budget, type InsertBudget, type UserSettings, type Tag, type InsertTag, type TransactionTag, type InsertTransactionTag, type Investment, type InsertInvestment } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 const { Pool } = pg;
@@ -356,4 +356,26 @@ export async function getTransactionTags(tId: number) {
   if (!links.length) return [];
 
   return await db.select().from(tags).where(inArray(tags.id, links.map(l => l.tagId)));
+}
+
+// ============ INVESTMENTS ============
+import { investments, type InsertInvestment } from "../drizzle/schema";
+
+export async function getInvestments() {
+  const db = await getDb();
+  if (!db) return [];
+  // Sort by category then name
+  return await db.select().from(investments).orderBy(investments.category, investments.name);
+}
+
+export async function createInvestment(data: InsertInvestment) {
+  const db = await getDb();
+  if (!db) return;
+  return await db.insert(investments).values(data).returning();
+}
+
+export async function deleteInvestment(id: number) {
+  const db = await getDb();
+  if (!db) return;
+  await db.delete(investments).where(eq(investments.id, id));
 }

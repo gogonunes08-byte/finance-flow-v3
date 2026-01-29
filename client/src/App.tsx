@@ -7,12 +7,14 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Dashboard from "./pages/Dashboard";
 import Reports from "./pages/Reports";
 import SettingsPage from "./pages/Settings";
+import Investments from "./pages/Investments";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Dashboard} />
+      <Route path={"/investments"} component={Investments} />
       <Route path={"/reports"} component={Reports} />
       <Route path={"/settings"} component={SettingsPage} />
       <Route path={"/404"} component={NotFound} />
